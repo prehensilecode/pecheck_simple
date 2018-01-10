@@ -29,6 +29,8 @@ func job_verification_function() {
 
         // XXX the "shm" PE is the single-node multicore PE
         //     change this to the equivalent for your site
+        // XXX note that this does not properly deal with a range of number of slots;
+        //     it just takes the max value of the range
         if strings.EqualFold("shm", pe_name) {
             pe_max, _ := jsv.GetParam("pe_max")
             jsv.SetParam("binding_strategy", "linear_automatic")
