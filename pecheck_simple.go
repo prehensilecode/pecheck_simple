@@ -42,7 +42,6 @@ func job_verification_function() {
     }
 
     if modified_p {
-        // jsv.JSV_show_params()
         jsv.Correct("Job was modified")
     } else {
         jsv.Correct("Job was not modified")
