@@ -7,7 +7,5 @@ It is written in [Go](https://golang.org) using [Daniel Gruber's jsv package](ht
 Things to note:
 
 0. This JSV tries to prevent multithreaded jobs which were submitted as serial jobs from consuming CPU cores. It does this using cgroups cpuset feature. This has been tested in UGE 8.4.4 -- see the UGE Administrator's Guide sec. 2.5.6
-1. This handles two cases:
-   (a) The *lack* of a PE request, indicating a serial job
-   (b) One of a small set of PEs corresponding to single-node multislot environments
+1. This handles two cases: (a) The *lack* of a PE request, indicating a serial job, and  (b) One of a small set of PEs corresponding to single-node multislot environments
 
