@@ -45,7 +45,6 @@ func job_verification_function() {
             // deal with "fixedNN" PEs
             pat, _ := regexp.Compile(`^fixed(\d+)`)
             res := pat.FindStringSubmatch(pe_name)
-            // fmt.Printf("%s\n", res[1]) 
             jsv.SetParam("binding_strategy", "striding_automatic")
             jsv.SetParam("binding_type", "set")
             jsv.SetParam("binding_amount", res[1])
