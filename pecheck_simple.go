@@ -10,11 +10,11 @@ import (
     "github.com/dgruber/jsv"
 )
 
-func jsv_on_start_function() {
-    //jsv_send_env()
+func onStart() {
+    //jsv.SendEnv()
 }
 
-func job_verification_function() {
+func verify() {
     //
     // Set binding on serial jobs (i.e. no PE) to "linear:1
     //
@@ -63,6 +63,6 @@ func job_verification_function() {
 }
 
 func main() {
-    jsv.Run(true, job_verification_function, jsv_on_start_function)
+    jsv.Run(true, verify, onStart)
 }
 
